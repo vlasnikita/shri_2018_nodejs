@@ -5,10 +5,13 @@
     <meta charset="utf-8" />
 </head>
 <body>
-	<p>Branch: <b>{{branch}}</b></p>
+	<p>Ветка: <b>{{branch}}</b> <a href="filetree/{{branch}}">файловое дерево этой ветки</a></p>
     <ul>
     	{{#each commits}}
-			<li>{{this}}</li>
+			<li>
+				<b>{{this.hash}} </b> {{this.author}} {{this.date}}
+				<a href="filetree/{{this.hash}}">файловое дерево этого коммита</a>
+			</li>
     	{{/each}}
     </ul>
 </body>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Дерево файлов</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+	<p>Дерево файлов для <b>{{object}}</b></p>
+    <ul>
+    	{{#each files}}
+			<li>{{this.name}} <a href="/file/{{this.hash}}">открыть файл</a></li>
+    	{{/each}}
+    </ul>
+</body>
+<html>

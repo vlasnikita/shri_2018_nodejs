@@ -1,12 +1,11 @@
 import express from 'express';
-import { getBranches, getCommits } from './utils.js';
+import { getBranches, getCommits, getFiles, getFile } from './utils.js';
 
 const app = express();
 
 app.set('view engine', 'hbs');
 app.get('/', async (req, res) => {
 	const branches = await getBranches();
-	console.log(typeof branches === 'string')
 	res.render('main.hbs', {
 		title: 'Main',
 		branches: branches
@@ -18,6 +17,22 @@ app.get('/:branch', async ({params: { branch }}, res) => {
 	res.render('branch.hbs', {
 		branch: branch,
 		commits: commits
+	});
+});
+
+app.get('/filetree/:object', async ({params: { object }}, res) => { 
+	const files = await getFiles(object);
+	res.render('fileTree.hbs', {
+		object: object,
+		files: files
+	});
+});
+
+app.get('/file/:hash', async ({params: { hash }}, res) => { 
+	const file = await getFile(hash);
+	res.render('file.hbs', {
+		hash: hash,
+		file: file
 	});
 });
 
