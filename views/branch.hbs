@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{branch}}</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+	<p>Branch: <b>{{branch}}</b></p>
+    <ul>
+    	{{#each commits}}
+			<li>{{this}}</li>
+    	{{/each}}
+    </ul>
+</body>
+<html>

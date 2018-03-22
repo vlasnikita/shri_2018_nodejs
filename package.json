@@ -1,0 +1,32 @@
+{
+  "name": "vlasnikita-shri-nodejs",
+  "version": "1.0.0",
+  "description": "Домашняя работа по теме \"NodeJS\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js --exec babel-node -e js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlasnikita/shri_2018_nodejs.git"
+  },
+  "author": "vlasnikita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vlasnikita/shri_2018_nodejs/issues"
+  },
+  "homepage": "https://github.com/vlasnikita/shri_2018_nodejs#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
+  }
+}
